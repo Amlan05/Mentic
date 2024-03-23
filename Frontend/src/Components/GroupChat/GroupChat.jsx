@@ -17,7 +17,7 @@ const GroupChat = ({ isopen, isAnonymous }) => {
   const docId = localStorage.getItem("doctorId");
 
   const socket = useMemo(() => {
-    return io("https://docker-mentic-59it.vercel.app/community"); 
+    return io("https://mentic-production.up.railway.app/community"); 
   }, []);
 
   const [newMessages, setNewMessages] = useState([])
@@ -40,7 +40,7 @@ const GroupChat = ({ isopen, isAnonymous }) => {
     if (isUserLoggedIn === true) {
       let user;
       try {
-        user = await axios.get(`https://docker-mentic-59it.vercel.app/users/${id}`);
+        user = await axios.get(`https://mentic-production.up.railway.app/users/${id}`);
       } catch (err) {
         return console.log(err);
       }
@@ -62,7 +62,7 @@ const GroupChat = ({ isopen, isAnonymous }) => {
     else if (isAdminLoggedIn === true) {
       let doctor;
       try {
-        doctor = await axios.get(`https://docker-mentic-59it.vercel.app/${docId}`);
+        doctor = await axios.get(`https://mentic-production.up.railway.app/${docId}`);
       } catch (err) {
         console.log(err);
       }

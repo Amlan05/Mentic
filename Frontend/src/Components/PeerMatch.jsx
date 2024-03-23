@@ -13,7 +13,7 @@ const PeerMatch = () =>{
     const id = localStorage.getItem("userId") 
 
     const getUserHealth = async () => {
-      const data = await axios.get(`https://docker-mentic-59it.vercel.app/healths/${id}`)
+      const data = await axios.get(`https://mentic-production.up.railway.app/healths/${id}`)
       console.log(data.data.data)
       const healthArray = data.data.data
       setHealthReport(healthArray[healthArray.length - 1])
@@ -21,13 +21,13 @@ const PeerMatch = () =>{
     }
 
     const getSimilarUsers = async() => {
-      const simpeer = await axios.get(`https://docker-mentic-59it.vercel.app/healths/similarUsers/${id}`)
+      const simpeer = await axios.get(`https://mentic-production.up.railway.app/healths/similarUsers/${id}`)
       console.log(simpeer.data.similarUsers)
       return simpeer.data
     }
 
     const getDoctors = async() => {
-      const doctors = await axios.get('https://docker-mentic-59it.vercel.app/doctors')
+      const doctors = await axios.get('https://mentic-production.up.railway.app/doctors')
       console.log(doctors.data)
       return doctors.data
     }

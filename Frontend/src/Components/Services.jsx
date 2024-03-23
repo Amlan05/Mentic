@@ -57,7 +57,7 @@ const Services = () => {
       navigate('/auth')
     }
     try{
-      let post = await axios.post('https://docker-mentic-59it.vercel.app/healths/giveHealthData',healthData)
+      let post = await axios.post('https://mentic-production.up.railway.app/healths/giveHealthData',healthData)
       console.log(post)
       navigate('/peers')
     }

@@ -14,7 +14,7 @@ const DashBoard = () => {
   const getUserDetails = async() => {
     let userById
     try{
-     userById = await axios.get(`https://docker-mentic-59it.vercel.app/users/${id}`)
+     userById = await axios.get(`https://mentic-production.up.railway.app/users/${id}`)
     }
     catch(err){
       console.log(err)
@@ -37,7 +37,7 @@ const DashBoard = () => {
 
   const addMoreData = async () => {
     try{
-    const moreData = await axios.patch(`https://docker-mentic-59it.vercel.app/users/addDetails/${id}`, moreDetails)
+    const moreData = await axios.patch(`https://mentic-production.up.railway.app/users/addDetails/${id}`, moreDetails)
     console.log(moreData.data)
     }
     catch(err){

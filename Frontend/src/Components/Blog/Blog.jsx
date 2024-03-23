@@ -9,7 +9,7 @@ const Blog = () => {
   const [isSearch, SetIsSearch] = useState(false)
 
   const getBlogs = async() => {
-   const blogData = await axios.get("https://docker-mentic-59it.vercel.app/blogs")
+   const blogData = await axios.get("https://mentic-production.up.railway.app/blogs")
     console.log(blogData.data)
     return (blogData.data)
   }
@@ -17,7 +17,7 @@ const Blog = () => {
   const filterBlogs = async() => {
     let filteredBlogs
     try{
-      filteredBlogs = await axios.get(`https://docker-mentic-59it.vercel.app/blogs/search?keyword=${encodeURIComponent(search)}`)
+      filteredBlogs = await axios.get(`https://mentic-production.up.railway.app/blogs/search?keyword=${encodeURIComponent(search)}`)
     }
     catch(err){
       console.log(err)

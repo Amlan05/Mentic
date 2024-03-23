@@ -17,7 +17,7 @@ const OneToOneChat = () => {
 
 
   const socket = useMemo(() => {
-    return io("https://docker-mentic-59it.vercel.app/personal"); 
+    return io("https://mentic-production.up.railway.app/personal"); 
   }, []);
 
   const sendMessage = async () => {

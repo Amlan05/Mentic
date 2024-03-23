@@ -10,7 +10,7 @@ const AddBlog = () => {
         let addedBlog
 
         try{
-            addedBlog = await axios.post("https://docker-mentic-59it.vercel.app/blogs/add", blogDetails)
+            addedBlog = await axios.post("https://mentic-production.up.railway.app/blogs/add", blogDetails)
         }
         catch(err){
             console.log(err)

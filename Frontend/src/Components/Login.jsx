@@ -22,7 +22,7 @@ const Login = () => {
     if(what === "userSignup" ){
     let sendData 
     try{
-       sendData = await axios.post('https://docker-mentic-59it.vercel.app/users/signup', userData) 
+       sendData = await axios.post('https://mentic-production.up.railway.app/users/signup', userData) 
        console.log(sendData.data.user._id)
        let setId = sendData.data.user
        localStorage.setItem('userId', setId._id)
@@ -41,7 +41,7 @@ const Login = () => {
   else if(what === "userLogin"){
     let sendData 
     try{
-       sendData = await axios.post('https://docker-mentic-59it.vercel.app/users/login', userData)
+       sendData = await axios.post('https://mentic-production.up.railway.app/users/login', userData)
        const setId = sendData.data.existingUser
        localStorage.setItem('userId', setId._id)
       dispatch(userActions.login())
@@ -60,7 +60,7 @@ const Login = () => {
   else if(what === "admin"){
     let sendAdminData
     try{
-      sendAdminData = await axios.post("https://docker-mentic-59it.vercel.app/doctors/login", userData)
+      sendAdminData = await axios.post("https://mentic-production.up.railway.app/doctors/login", userData)
      
     }
     catch(err){

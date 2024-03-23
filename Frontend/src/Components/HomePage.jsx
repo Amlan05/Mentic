@@ -32,7 +32,7 @@ const HomePage = () => {
   const [doctors, setDoctors] = useState([]);
 
   const getDoctordetails = async () => {
-    const docdet = await axios.get("https://docker-mentic-59it.vercel.app/doctors/");
+    const docdet = await axios.get("https://mentic-production.up.railway.app/doctors/");
     console.log(docdet.data);
     return docdet.data;
   };
